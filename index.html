@@ -1,314 +1,386 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Website title -->
-    <title>The Reading Room | Online Book Store</title>
+    <title>RoadLink | Professional Truck Dispatching</title>
 
-    <style>
-        /* General page styling */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f5ef;
-            color: #26352d;
-            line-height: 1.7;
-        }
+    <meta name="description"
+          content="RoadLink provides professional truck dispatching,
+          load booking and rate negotiation support for carriers.">
 
-        header {
-            background-color: #183c32;
-            color: white;
-            text-align: center;
-            padding: 30px 15px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 38px;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            background-color: #244d40;
-            text-align: center;
-            padding: 14px;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        a {
-            color: #17664d;
-            text-decoration: underline;
-        }
-
-        nav a {
-            color: white;
-        }
-
-        a:hover {
-            color: #c58b42;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 45px 20px;
-            background-color: #e9e2d4;
-        }
-
-        .hero h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 25px 20px;
-        }
-
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-
-        .book-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 18px;
-            text-align: center;
-            box-shadow: 0 3px 12px #00000012;
-        }
-
-        .book-card img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-
-        .price {
-            color: #17664d;
-            font-size: 19px;
-            font-weight: bold;
-        }
-
-        .offer {
-            background-color: #e5ede5;
-            padding: 25px;
-            border-left: 5px solid #244d40;
-            margin-top: 30px;
-        }
-
-        footer {
-            background-color: #183c32;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        footer a {
-            color: #f4d49c;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 29px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
-            }
-        }
-    </style>
+    <!-- Connect the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Website header -->
-    <header>
-        <h1>The Reading Room</h1>
-        <p><em>Discover stories. Explore knowledge. Imagine more.</em></p>
-    </header>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container navbar">
 
-    <!-- Navigation links -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#books">Featured Books</a>
-        <a href="#categories">Categories</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
+            <a href="#home" class="logo">
+                ROAD<span>LINK</span>
+                <small>TRUCK DISPATCHING</small>
+            </a>
 
-    <!-- Welcome section -->
-    <section class="hero" id="home">
-        <h2>Welcome to Your Next Great Read</h2>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why RoadLink</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
 
-        <p>
-            Explore our collection of books for curious minds,
-            passionate readers, and lifelong learners.
-        </p>
-
-        <p>
-            <strong>Find your next favourite book today!</strong>
-        </p>
-
-        <a href="#books">Explore Our Collection</a>
-    </section>
-
-    <!-- Featured books section -->
-    <main class="container" id="books">
-        <h2>Featured Books</h2>
-
-        <p>
-            Handpicked reads to inspire your imagination
-            and expand your knowledge.
-        </p>
-
-        <div class="book-grid">
-
-            <!-- Book 1 -->
-            <div class="book-card">
-                <img
-                    src="https://covers.openlibrary.org/b/title/The%20Great%20Gatsby-L.jpg"
-                    alt="Cover image for The Great Gatsby"
-                >
-
-                <h3>The Great Gatsby</h3>
-                <p>By F. Scott Fitzgerald</p>
-                <p>A classic story of dreams, ambition, and society.</p>
-                <p class="price">Rs. 850</p>
-                <a href="https://openlibrary.org/search?q=The+Great+Gatsby"
-                   target="_blank">View Book Details</a>
-            </div>
-
-            <!-- Book 2 -->
-            <div class="book-card">
-                <img
-                    src="https://covers.openlibrary.org/b/title/Pride%20and%20Prejudice-L.jpg"
-                    alt="Cover image for Pride and Prejudice"
-                >
-
-                <h3>Pride and Prejudice</h3>
-                <p>By Jane Austen</p>
-                <p>A timeless novel about love, character, and society.</p>
-                <p class="price">Rs. 950</p>
-                <a href="https://openlibrary.org/search?q=Pride+and+Prejudice"
-                   target="_blank">View Book Details</a>
-            </div>
-
-            <!-- Book 3 -->
-            <div class="book-card">
-                <img
-                    src="https://covers.openlibrary.org/b/title/Atomic%20Habits-L.jpg"
-                    alt="Cover image for Atomic Habits"
-                >
-
-                <h3>Atomic Habits</h3>
-                <p>By James Clear</p>
-                <p>Learn how small habits can create lasting change.</p>
-                <p class="price">Rs. 1,200</p>
-                <a href="https://openlibrary.org/search?q=Atomic+Habits"
-                   target="_blank">View Book Details</a>
-            </div>
+            <a href="#contact" class="button button-small">
+                Get a Quote
+            </a>
 
         </div>
+    </header>
 
-        <!-- Book categories -->
-        <section id="categories">
-            <h2>Explore Book Categories</h2>
 
-            <p>Choose a category according to your interests:</p>
+    <!-- ================= HERO SECTION ================= -->
+    <main>
 
-            <ul>
-                <li>Fiction and Literature</li>
-                <li>Science and Technology</li>
-                <li>Business and Entrepreneurship</li>
-                <li>Personal Development</li>
-                <li>History and Biography</li>
-            </ul>
+        <section class="hero" id="home">
+            <div class="container hero-content">
 
-            <h3>Our Most Popular Categories</h3>
+                <p class="eyebrow">YOUR BUSINESS. OUR PRIORITY.</p>
 
-            <ol>
-                <li>Personal Development</li>
-                <li>Fiction and Literature</li>
-                <li>Science and Technology</li>
-            </ol>
+                <h1>
+                    Keep Your Trucks Moving.
+                    <span>Grow Your Business.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Smart dispatching support for owner-operators
+                    and trucking companies. We help you find loads,
+                    negotiate rates and simplify your daily operations.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="button">
+                        Request a Quote &rarr;
+                    </a>
+
+                    <a href="#services" class="button button-outline">
+                        Explore Services
+                    </a>
+                </div>
+
+                <p class="hero-note">
+                    Reliable support. Smarter planning. Better journeys.
+                </p>
+
+            </div>
         </section>
 
-        <!-- Special offer section -->
-        <section class="offer">
-            <h2>Special Reading Offer</h2>
 
-            <p>
-                Start your reading journey with our
-                <strong>carefully selected collection</strong>.
-            </p>
+        <!-- ================= BUSINESS HIGHLIGHTS ================= -->
+        <section class="highlights" aria-label="Our key benefits">
+            <div class="container highlight-grid">
 
-            <p>
-                Reading is an investment in yourself.
-                <mark>Discover something new every day!</mark>
-            </p>
+                <article class="highlight-item">
+                    <span class="highlight-number">01</span>
+                    <h3>Load Planning</h3>
+                    <p>Find suitable loads for your trucking needs.</p>
+                </article>
 
-            <a href="https://openlibrary.org/"
-               target="_blank">Explore Open Library</a>
+                <article class="highlight-item">
+                    <span class="highlight-number">02</span>
+                    <h3>Rate Negotiation</h3>
+                    <p>Get support when discussing load rates.</p>
+                </article>
+
+                <article class="highlight-item">
+                    <span class="highlight-number">03</span>
+                    <h3>Dedicated Support</h3>
+                    <p>Stay informed throughout your dispatch process.</p>
+                </article>
+
+            </div>
         </section>
 
-        <!-- About the bookstore -->
-        <section id="about">
-            <h2>About The Reading Room</h2>
 
-            <p>
-                The Reading Room is a student-designed online bookstore
-                created for people who love books, learning, and discovery.
-                Our goal is to make exploring books simple and enjoyable.
-            </p>
+        <!-- ================= ABOUT US ================= -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
 
-            <p>
-                We believe that <b>every book opens a new world</b>
-                and every reader deserves a great story.
-            </p>
+                <div class="about-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Commercial truck travelling on a highway"
+                        loading="lazy">
+                    <div class="image-label">
+                        <strong>Moving Forward</strong>
+                        <span>One load at a time</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <p class="eyebrow">ABOUT ROADLINK</p>
+
+                    <h2>We Help Keep Your Business on the Road</h2>
+
+                    <p>
+                        RoadLink Truck Dispatching is a conceptual
+                        dispatch service website designed to showcase
+                        professional support for owner-operators and
+                        trucking businesses.
+                    </p>
+
+                    <p>
+                        From load research to communication support,
+                        our goal is to help carriers organise their
+                        work and manage their journeys more efficiently.
+                    </p>
+
+                    <ul class="check-list">
+                        <li>Load search and booking assistance</li>
+                        <li>Rate discussion and negotiation support</li>
+                        <li>Clear communication and load updates</li>
+                    </ul>
+
+                    <a href="#contact" class="text-link">
+                        Let's Talk About Your Business &rarr;
+                    </a>
+                </div>
+
+            </div>
         </section>
 
-        <!-- Contact information -->
-        <section id="contact">
-            <h2>Contact Us</h2>
 
-            <p>Have a question or a book recommendation?</p>
+        <!-- ================= SERVICES ================= -->
+        <section class="section services-section" id="services">
+            <div class="container">
 
-            <p>
-                Email:
-                <a href="mailto:readingroom@example.com">
-                    readingroom@example.com
-                </a>
-            </p>
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT WE DO</p>
+                    <h2>Dispatch Services Built Around Your Needs</h2>
+                    <p>
+                        Practical support to help make everyday
+                        trucking operations easier to manage.
+                    </p>
+                </div>
 
-            <p>
-                Visit
-                <a href="https://openlibrary.org/" target="_blank">
-                    Open Library
-                </a>
-                to discover more books.
-            </p>
+                <div class="service-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            &#128666;
+                        </div>
+                        <h3>Load Booking</h3>
+                        <p>
+                            Research available loads and help coordinate
+                            suitable bookings for your operation.
+                        </p>
+                        <a href="#contact">Ask about this service &rarr;</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            &#128176;
+                        </div>
+                        <h3>Rate Negotiation</h3>
+                        <p>
+                            Get assistance communicating with brokers
+                            about load rates and shipment details.
+                        </p>
+                        <a href="#contact">Ask about this service &rarr;</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            &#128221;
+                        </div>
+                        <h3>Load Coordination</h3>
+                        <p>
+                            Keep load information, pickup details
+                            and delivery schedules organised.
+                        </p>
+                        <a href="#contact">Ask about this service &rarr;</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            &#128172;
+                        </div>
+                        <h3>Communication Support</h3>
+                        <p>
+                            Help maintain clear communication about
+                            load updates and delivery requirements.
+                        </p>
+                        <a href="#contact">Ask about this service &rarr;</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= WHY CHOOSE US ================= -->
+        <section class="section why-section" id="why-us">
+            <div class="container why-grid">
+
+                <div class="why-content">
+                    <p class="eyebrow">THE ROADLINK APPROACH</p>
+
+                    <h2>A More Organised Way to Manage Your Loads</h2>
+
+                    <p>
+                        Every trucking operation has different needs.
+                        Our approach focuses on communication,
+                        organisation and practical dispatch assistance.
+                    </p>
+
+                    <!-- Ordered list demonstrates step-by-step content -->
+                    <ol class="process-list">
+                        <li>
+                            <strong>Understand Your Needs</strong>
+                            <span>Discuss your truck type, lanes and preferences.</span>
+                        </li>
+                        <li>
+                            <strong>Research Available Loads</strong>
+                            <span>Review options that match your requirements.</span>
+                        </li>
+                        <li>
+                            <strong>Coordinate the Details</strong>
+                            <span>Help organise booking and shipment information.</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="why-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1586191582151-f73872dfd183?auto=format&fit=crop&w=1000&q=85"
+                        alt="Heavy-duty freight truck used in transportation"
+                        loading="lazy">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-grid">
+
+                <div class="contact-content">
+                    <p class="eyebrow">LET'S GET MOVING</p>
+
+                    <h2>Tell Us About Your Trucking Business</h2>
+
+                    <p>
+                        Have questions about dispatching services?
+                        Complete the inquiry form and prepare your
+                        request for the RoadLink team.
+                    </p>
+
+                    <h3>Our Service Focus</h3>
+
+                    <ul class="contact-list">
+                        <li>Owner-operators</li>
+                        <li>Independent carriers</li>
+                        <li>Small trucking fleets</li>
+                    </ul>
+
+                    <p class="small-note">
+                        This is a student project. The form is a front-end
+                        demonstration and does not send information to a server.
+                    </p>
+                </div>
+
+                <!-- Demonstration form: no backend is connected -->
+                <form class="contact-form" action="#contact" method="get">
+
+                    <h3>Request Information</h3>
+
+                    <label for="full-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required>
+
+                    <label for="truck-type">Truck Type</label>
+                    <select id="truck-type" name="truck-type" required>
+                        <option value="">Select your truck type</option>
+                        <option value="dry-van">Dry Van</option>
+                        <option value="reefer">Reefer</option>
+                        <option value="flatbed">Flatbed</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">How Can We Help?</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Tell us about your dispatching needs"
+                        required></textarea>
+
+                    <button type="submit" class="button form-button">
+                        Submit Inquiry &rarr;
+                    </button>
+
+                    <p class="form-note">
+                        Demo form only. Submission does not contact RoadLink.
+                    </p>
+
+                </form>
+
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 The Reading Room. All rights reserved.</p>
-        <p><small>Designed with a love for books and learning.</small></p>
-        <a href="#home">Back to Top</a>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+
+            <a href="#home" class="logo footer-logo">
+                ROAD<span>LINK</span>
+                <small>TRUCK DISPATCHING</small>
+            </a>
+
+            <p>
+                Professional dispatching support for the road ahead.
+            </p>
+
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="https://www.fmcsa.dot.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        FMCSA Resources
+                    </a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                &copy; 2026 RoadLink Truck Dispatching.
+                Student website project.
+            </p>
+
+        </div>
     </footer>
 
 </body>
